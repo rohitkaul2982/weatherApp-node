@@ -1,7 +1,3 @@
-console.log('javascript file has loaded')
-
-
-
 const weatherForm = document.querySelector('form')
 const searchLocation  = document.querySelector('input')
 const message1 = document.querySelector('#message-1')
@@ -15,7 +11,7 @@ weatherForm.addEventListener('submit' ,(e) =>{
 
     message1.textContent = 'data loading plz wait ... '
     message2.textContent =''
-    
+
     fetch('http://localhost:3000/weather?address='+location).then((response)=>{
         response.json().then((data) => {
             if(data.error){
